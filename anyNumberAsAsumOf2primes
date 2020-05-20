@@ -1,0 +1,52 @@
+#include<stdio.h>
+#include<conio.h>
+void sumOfPrimes(int);
+int nextPrime(int);
+int isPrime(int);
+void main()
+{
+    int x;
+    printf("enter a num:");
+    scanf("%d",&x);
+    //printf("%d",nextPrime(x));
+    sumOfPrimes(x);
+}
+void sumOfPrimes(int x)
+{
+    int i,flag=1,j;
+    for(j=2;j<=x/2;j++)
+    {
+    if(isPrime(j))
+       {
+
+        if(isPrime(x-j))
+            {printf("%d + %d\n",j,x-j);
+            flag=0;}
+       }
+    }
+    if(flag==1)
+       printf("no sum of primes exist for the given number");
+
+}
+int isPrime(int n)
+{
+    int i,flag=1;
+    for(i=2;i<n;i++)
+        if(n%i==0)
+        {
+             flag=0;
+            return 0;
+        }
+    if(flag==1)
+        return 1;
+}
+int nextPrime(int n)
+{
+
+    while(!isPrime(n+1))
+        n++;
+    return (n+1);
+
+}
+
+
