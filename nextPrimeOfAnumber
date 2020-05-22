@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+    int i,j=1,N;
+    printf("enter a num:");
+    scanf("%d",&N);
+    while(1)
+    {
+       // j=1;
+       for(i=2;i<N+j;i++)
+            if((N+j)%i==0)
+                break;
+       if(i==N+j)
+            {printf("%d",N+j);
+            break;}
+        j++;
+    }
+
+
+}
+
+
