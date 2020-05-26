@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<conio.h>
+#include<limits.h>
+void rightSmaller(int [],int);
+void main()
+{
+    int arr[]={1,2,3,5,4};
+    rightSmaller(arr,5);
+
+}
+void rightSmaller(int arr[5], int n)
+{
+    int i,max;
+    max=INT_MIN;
+    for(i=4;i>=0;i--)
+    {
+        if(arr[i]>max)
+        {
+            max=arr[i];
+            printf(" %d",max);
+        }
+    }
+
+
+
+
+}
