@@ -1,0 +1,21 @@
+#include<stdio.h>
+int fib(int n);
+void main()
+{
+    //int k;
+    printf("%d",fib(8));
+
+}
+
+
+int fib(int n)
+{
+    int a=-1,b=1;
+    int temp;
+    for(int i=1;i<=n;i++){
+        temp=a+b;
+        a=b;
+        b=temp;
+    }
+    return temp;
+}
