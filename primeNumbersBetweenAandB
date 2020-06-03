@@ -1,0 +1,30 @@
+
+#include<stdio.h>
+#include<conio.h>
+#include<math.h>
+void main()
+{
+    int i,a,b,x,count=0,rootx;
+    printf("enter a,b:");
+    scanf("%d%d",&a,&b);
+    //printf("prime numbers are:");
+    if(a==1)
+        a++;
+
+    for(x=a;x<=b;x++)
+    {
+        rootx=sqrt(x);
+        for(i=2;i<=rootx;i++)
+            if(x%i==0)
+                {
+                    count++;
+                    break;
+                }
+        if(i==rootx+1)
+            printf(" %d ",x);
+    }
+    if(count==b-a+1)
+        printf("no prime numbers in given range");
+
+
+}
