@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<conio.h>
+#include<math.h>
+void main()
+{
+    int n;
+    void isArmstrong(int);
+    printf("enter a no.:");
+    scanf("%d",&n);
+    isArmstrong(n);
+}
+ void isArmstrong(int a)
+ {
+     int sum=0,x=a;
+     while(x!=0)
+     {
+         sum=sum+pow((x%10),3);
+         x=x/10;
+     }
+     //printf("%d",sum);
+    if(sum==a)
+        printf("yes");
+    else
+        printf("no");
+ }
+
+
