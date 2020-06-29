@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<conio.h>
+int nthPrime(int n);
+void main()
+{
+    int n,p;
+    scanf("%d",&n);
+    p=nthPrime(n);
+    printf("%d ",p);
+
+
+}
+
+int nthPrime(int n)
+{
+    int j,flag,prime,count=1,arr[100],x=0;
+    int i;
+    for(i=2;count<=n;i++)
+    {
+        flag=1;
+        for(j=2;j<i;j++)
+        {
+            if(i%j==0)
+            {
+                flag=0;
+                break;
+            }
+
+        }
+        if(flag)
+        {
+            arr[x]=i;
+
+
+            count++;x++;
+        }
+
+
+    }
+    return (arr[x-1]);
+
+}
+
+
