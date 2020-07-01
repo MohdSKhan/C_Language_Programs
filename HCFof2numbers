@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+    int i,x,y,hcf=1,smaller;
+    printf("enter 2 numbers: ");
+    scanf("%d%d",&x,&y);
+    //smaller=x<y?x:y;
+    for(i=1;i<=(x<y?x:y);i++)
+        if(x%i==0 && y%i==0)
+            hcf=i;
+    printf("hcf is %d",hcf);
+
+
+}
+
+
