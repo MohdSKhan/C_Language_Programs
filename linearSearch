@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+    int arr[10],total,search,i,k;
+    printf("enter total no.:");
+    scanf("%d",&total);
+    printf("enter elements:");
+    for(i=0;i<total;i++)
+        scanf("%d",&arr[i]);
+    printf("enter search element:");
+    scanf("%d",&search);
+    //k=linearSearch(search);
+
+    for(i=0;i<total;i++)
+        if(search==arr[i])
+            break;
+    if(i==total)
+        printf("element not found!!");
+    else
+        printf("search found at position %d",i+1);
+}
