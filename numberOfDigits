@@ -1,0 +1,19 @@
+
+
+#include<stdio.h>
+#include<conio.h>
+//int fun1(void);
+void main()
+{
+   int n,i=10,count=0;
+    printf("enter a number:");
+   scanf("%d",&n);
+     while(n%i != n)
+     {
+        count++;
+        i*=10;
+
+
+     }
+     printf("digits are %d",count+1);
+}
