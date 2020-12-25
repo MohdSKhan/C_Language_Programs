@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<conio.h>
+void octal(int n);
+void main()
+{
+    int n;
+    scanf("%d",&n);
+   octal(n);
+
+
+}
+
+void octal(int n)
+{
+    if(n>0)
+    {
+        octal(n/8);
+        printf("%d",n%8);
+    }
+}
+
+
