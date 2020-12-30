@@ -1,0 +1,42 @@
+#include<stdio.h>
+#include<limits.h>
+int getMin(int arr[],int sidx,int n);
+void sort(int arr[],int sidx,int n);
+void main()
+{
+    int arr[10]={70,10,30,40,50,60,80,90,100,20},sidx=0,n=10;
+    sort(arr,sidx,n);
+    for(int i=0;i<n;i++)
+       printf("%d, ",arr[i]);
+}
+void sort(int arr[],int sidx,int n)
+{
+   int temp;
+   if(sidx<n-1)
+   {
+    int minIndex=getMin(arr,sidx,n);
+    {
+        temp=arr[sidx];
+        arr[sidx]=arr[minIndex];
+        arr[minIndex]=temp;
+    }
+
+   sort(arr,sidx+1,n);
+   }
+}
+int getMin(int arr[],int sidx,int n)
+{
+    int idx,i;
+    int min=INT_MAX;
+    for(i=sidx;i<n;i++)
+        if(arr[i]<min)
+        {
+            min=arr[i];
+            idx=i;
+        }
+
+    return idx;
+}
+
+
+
