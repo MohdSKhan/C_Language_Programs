@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+    int i=0,x,flag=0;
+    char s[20];
+    printf("enter: ");
+    gets(s);
+    while(s[i])
+    {
+        if(s[i]>=48 && s[i]<=57)
+        {
+            for(x=0;s[x];x++)
+            {
+                if(s[x]>=65 && s[x]<=90  ||  s[x]>=97 && s[x]<=122)
+                    {flag++;break;}
+            }
+
+        }
+
+        i++;
+    }
+    if(flag)
+        printf("yes");
+    else
+        printf("no");
+
+
+}
+
+
