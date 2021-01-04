@@ -1,0 +1,65 @@
+#include<stdio.h>
+#include<conio.h>
+void isPresent(char[],char[],int);
+int index(int,char[],int);
+void main()
+{
+    int firstidx,start=0;
+    char s[50],sub[50]; printf("enter a string: "); gets(s);
+    printf("enter substring: ");   gets(sub);
+    firstidx=index(sub[0],s,start);
+    if(firstidx==-1)
+        printf("not present");
+    else
+    {
+        isPresent(s,sub,firstidx);
+    }
+
+}
+void isPresent(char s[],char sub[],int firstidx)
+{
+    int i=0,x=1,j=firstidx,length,flag=0;
+    length=strlen(sub);
+    while(x<=length)
+    {
+        if(sub[i]==s[j])
+        {
+            i++;j++;flag=1;
+        }
+        else
+        {
+            flag=0;
+            break;
+        }
+
+        x++;
+    }
+    if(flag)
+        printf("present at %d",firstidx);
+    else
+    {
+        firstidx=index(sub[0],s,firstidx+1);
+         if(firstidx==-1)
+        printf("not present");
+    else
+    {
+        isPresent(s,sub,firstidx);
+    }
+
+    }
+
+}
+
+
+int index(int sub,char s[],int start)
+{
+    int i;
+    for(i=start;s[i];i++)
+        if(sub==s[i])
+            return i;
+    return (-1);
+}
+
+
+
+
