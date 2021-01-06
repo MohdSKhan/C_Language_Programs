@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<conio.h>
+int Count(char[]);
+void main()
+{
+    char s[20];
+    int i,temp,k;
+    gets(s);
+    k=Count(s);
+    for(i=0;i<k/2;i++)
+        //swap(s[i],s[6-i]);
+        {
+            temp=s[i];
+            s[i]=s[k-1-i];
+            s[k-1-i]=temp;
+        }
+    //printf("%s",strrev(s));
+    puts(s);
+
+}
+int Count(char s[])
+{
+    int i;
+    for(i=0;s[i]!='\0';i++);
+
+    return i;
+
+}
+
