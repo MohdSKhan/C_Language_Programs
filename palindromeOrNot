@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+    char s[20],temp[20];
+    int k;
+    printf("enter:");
+    gets(s);
+    strcpy(temp,s);
+    strrev(s);
+    k=strcmp(temp,s);
+    if(k==0)
+        printf("%s is palindrome",s);
+    else
+        printf("%s is NOT palindrome",temp);
+
+
+
+}
+
+
