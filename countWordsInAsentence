@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+void main()
+{
+    char s[50];
+    int i,space=0;
+    printf("enter:");
+    gets(s);
+    for(i=0;s[i]!='\0';i++)
+        if(s[i]==32)
+            space++;
+    printf("words: %d",space+1);
+
+
+
+
+
+}
+
+
