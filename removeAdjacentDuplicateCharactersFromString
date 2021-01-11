@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+    int i,j=0;
+    char s[50],t[50];
+    printf("enter: ");
+    gets(s);
+    for(i=0;s[i]!='\0';i++)
+    {
+        if(s[i]!=s[i+1])
+        {
+            t[j]=s[i];
+            t[j+1]=s[i+1];
+            j++;
+        }
+    }
+    puts(t);
+
+
+}
+
+
