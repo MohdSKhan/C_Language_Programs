@@ -1,0 +1,47 @@
+#include<stdio.h>
+#include<conio.h>
+#include<limits.h>
+void selectionSort(int arr[],int n);
+int min(int arr[],int sidx,int eidx);
+void main()
+{
+    int n,i,arr[10];
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+        scanf("%d",&arr[i]);
+    selectionSort(arr,n);
+    for(i=0;i<n;i++)
+        printf("%d, ",arr[i]);
+
+}
+int min(int arr[],int sidx,int eidx)
+{
+    int i,idx,min=INT_MAX;
+    for(i=sidx;i<=eidx;i++)
+    {
+        if(arr[i]<min)
+        {
+            min=arr[i];
+            idx=i;
+        }
+
+    }
+    return idx;
+}
+
+void selectionSort(int arr[],int n)
+{
+    int loc,i,round,temp;
+
+    for(i=0;i<n;i++)
+        {
+            loc=min(arr,i,n-1);
+            temp=arr[i];
+            arr[i]=arr[loc];
+            arr[loc]=temp;
+
+        }
+
+}
+
+
